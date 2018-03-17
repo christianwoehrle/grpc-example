@@ -38,16 +38,20 @@ License applies.
 The changes applies include changing the use of the
 `golang/protobuf` packages to `gogo/protobuf`, and changing the
 generated files from `google.golang.org/genproto/googleapis` to
-`github.com/goog/googleapis/`.
+`github.com/gogo/googleapis/`.
 
 We've also created an implicit interface fulfilled by all `gogo/status`
-errors, for use in gRPC;
+errors, for use in gRPC pending
+[https://github.com/grpc/grpc-go/pull/1927](https://github.com/grpc/grpc-go/pull/1927).
 
 ```go
 type StatusError interface {
     error
-    Code() codes.Code
-    Message() string
-    Details() []interface{ TypeUrl() string, Value() []byte}
+    GetCode() codes.Code
+    GetMessage() string
+    GetDetails() []interface{
+        GetTypeUrl() string
+        GetValue() []byte
+    }
 }
 ```

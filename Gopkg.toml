@@ -51,7 +51,3 @@ required = [
 [[constraint]]
   branch = "master"
   name = "github.com/golang/mock"
-
-[[constraint]]
-  branch = "master"
-  name = "google.golang.org/genproto"

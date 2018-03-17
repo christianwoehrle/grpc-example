@@ -14,7 +14,10 @@
 [[projects]]
   branch = "master"
   name = "github.com/gogo/googleapis"
-  packages = ["google/api"]
+  packages = [
+    "google/api",
+    "google/rpc"
+  ]
   revision = "262acac113c2f2bc25bbf810056cd382f61b8386"
 
 [[projects]]
@@ -186,7 +189,6 @@
   name = "google.golang.org/genproto"
   packages = [
     "googleapis/api/annotations",
-    "googleapis/rpc/errdetails",
     "googleapis/rpc/status"
   ]
   revision = "2b5a72b8730b0b16380010cfe5286c42108d88e7"
@@ -224,6 +226,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "a274d4a6f5f061259002b8f0bd1851bbcc005a9c1e10c30d8daec5a76b15ce1d"
+  inputs-digest = "20c8ccef70a037177aaad923b258e7548023ee4afbfd7d6eff3f6ded921f03d4"
   solver-name = "gps-cdcl"
   solver-version = 1
